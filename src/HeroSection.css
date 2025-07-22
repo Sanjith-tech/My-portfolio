@@ -1,0 +1,50 @@
+.hero-section {
+  background-image: url('images/back.png'); /* ✅ public/images/back.png */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  padding: 100px 20px;
+  text-align: center;
+  color: white;
+}
+.hero {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 0 2rem;
+}
+
+.hero h1 {
+  font-size: 4rem;
+}
+
+.hero p {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 3rem;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+}

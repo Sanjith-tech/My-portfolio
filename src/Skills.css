@@ -1,0 +1,128 @@
+.skills-section {
+  padding: 60px 20px;
+  background: #0a0a0a;
+  color: #f0f0f0;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+
+}
+
+.skills-section h2 {
+  font-size: 36px;
+  margin-bottom: 40px;
+  color: #00fff7;
+  text-shadow: 0 0 10px #00fff7, 0 0 20px #00fff7;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px;
+}
+
+.skill-card {
+  background: #111;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #00fff7;
+}
+
+.skill-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.4);
+}
+
+.skill-card h3 {
+  font-size: 18px;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.skill-card h3 svg {
+  margin-right: 10px;
+  color: #00fff7;
+  filter: drop-shadow(0 0 5px #00fff7);
+}
+
+.skill-bar {
+  margin-top: 12px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #222;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Neon glow for each skill bar */
+.skill-bar::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  left: 0;
+  top: 0;
+  border-radius: 5px;
+  animation: fill 1.5s ease forwards;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.6);
+}
+
+/* Bar colors + width (custom per skill) */
+.solidworks::after {
+  background-color: #00f0ff;
+  width: 85%;
+}
+
+.python::after {
+  background-color: #ff00ff;
+  width: 75%;
+}
+
+.htmlcss::after {
+  background-color: #00ff99;
+  width: 80%;
+}
+
+.react::after {
+  background-color: #00ccff;
+  width: 65%;
+}
+
+.automation::after {
+  background-color: #ff4444;
+  width: 70%;
+}
+
+/* Animation */
+@keyframes fill {
+  from {
+    width: 0;
+  }
+}
+.skills {
+  padding: 4rem 8rem;
+  text-align: center;
+}
+
+.skill-icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .skills {
+    padding: 2rem;
+  }
+
+  .skill-icons {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
